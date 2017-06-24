@@ -1,0 +1,25 @@
+package additionalcombustible;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.item.Item;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+
+public class ADItemsRegister
+{
+   public static Item SmallCharcoalPile = new ADSmallCharcoalPile("Small Charcoal Pile");
+
+   public static void register()
+   {
+       //Регистрация предмета. На каждый предмет свой GameRegistry.register
+       GameRegistry.register(SmallCharcoalPile);
+   }
+
+   @SideOnly(Side.CLIENT)
+   public static void registerRender()
+   {
+       Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(SmallCharcoalPile, 0, new ModelResourceLocation(SmallCharcoalPile.getRegistryName(), "inventory"));
+   }
+}
