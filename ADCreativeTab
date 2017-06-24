@@ -1,0 +1,20 @@
+package additionalcombustible;
+
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+
+public class ADCreativeTab {
+
+	public static Object instance;
+
+	public static CreativeTabs mcreator_additionalCombustible = new CreativeTabs("tabadditionalCombustible") {
+		@SideOnly(Side.CLIENT)
+		@Override
+		public ItemStack getTabIconItem() {
+			return new ItemStack(ADItemsRegister.SmallCharcoalPile);
+		}
+
+	};
+}
