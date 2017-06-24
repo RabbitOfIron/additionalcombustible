@@ -1,0 +1,23 @@
+package additionalcombustible;
+
+public class ADClientProxy extends ADServerProxy
+{
+   @Override
+   public void preInit()
+   {
+       //Достаём регистрацию из родительского метода preInit().
+       super.preInit();
+   }
+
+   @Override
+   public void init()
+   {
+	   ADItemsRegister.registerRender();
+   }
+
+   @Override
+   public void postInit()
+   {
+       //Тут будут наши регистрации
+   }
+}
