@@ -1,0 +1,13 @@
+package additionalcombustible;
+
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+
+public class ADRecipesRegister {
+	public static void register()
+	   {
+		 GameRegistry.addSmelting(ADItemsRegister.SmallCharcoalPile, new ItemStack(ADItemsRegister.SmallCharcoalPile), 1.0F);
+		 GameRegistry.addShapeless(new ItemStack(ADItemsRegister.SmallCharcoalPile), "A", 'A', Items.COAL);
+	   }
+}
