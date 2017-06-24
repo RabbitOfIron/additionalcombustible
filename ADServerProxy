@@ -1,0 +1,12 @@
+package additionalcombustible;
+
+public class ADServerProxy
+{
+   public void preInit() {
+	   ADItemsRegister.register();
+   }
+   public void init() {
+	   ADRecipesRegister.register();
+   }
+   public void postInit() {}
+}
